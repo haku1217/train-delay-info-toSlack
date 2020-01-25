@@ -46,9 +46,8 @@ func getInfo() []string {
 	return data
 }
 
-var sendUrl string = os.Getenv("webhook_url")
-
 func main() {
+	var sendUrl string = os.Getenv("WEBHOOK_URL")
 	targetTrainDelayInfo := getInfo()
 	var sendText string
 	if len(targetTrainDelayInfo) != 0 {
