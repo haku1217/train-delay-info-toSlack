@@ -1,7 +1,7 @@
 name: Go
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/30 * * * *'
 jobs:
   build:
     name: Build
