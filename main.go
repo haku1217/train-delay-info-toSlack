@@ -45,7 +45,7 @@ func getInfo() []string {
 	return data
 }
 
-const sendUrl string = "https://hooks.slack.com/services/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"
+const sendUrl string = "https://hooks.slack.com/services/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"
 
 func main() {
 	targetTrainDelayInfo := getInfo()
