@@ -11,8 +11,9 @@ jobs:
       uses: actions/setup-go@v1
       with:
         go-version: 1.13
+        super_secret: ${{ secrets.SuperSecret }}
       env:
-        webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+        super_secret: ${{ secrets.SuperSecret }}
       id: go
     - name: Check out code into the Go module directory
       uses: actions/checkout@v1
