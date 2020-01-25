@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"os"
 	"strings"
 )
 
@@ -45,7 +46,7 @@ func getInfo() []string {
 	return data
 }
 
-const sendUrl string = "https://hooks.slack.com/services/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"
+var sendUrl string = os.Getenv("webhook_url")
 
 func main() {
 	targetTrainDelayInfo := getInfo()
