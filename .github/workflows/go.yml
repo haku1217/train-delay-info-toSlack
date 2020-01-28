@@ -11,9 +11,6 @@ jobs:
       uses: actions/setup-go@v1
       with:
         go-version: 1.13
-        super_secret: ${{ secrets.SuperSecret }}
-      env:
-        super_secret: ${{ secrets.SuperSecret }}
       id: go
     - name: Check out code into the Go module directory
       uses: actions/checkout@v1
@@ -22,3 +19,5 @@ jobs:
       run: go mod download
     - name: Run Notify to Slack
       run: go run main.go
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
